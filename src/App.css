@@ -1,0 +1,271 @@
+body {
+  font-family: "revert", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  margin: auto;
+}
+.navbar {
+  width: 100vw;
+  max-width: 1200px;
+  position: fixed;
+  top: 0;
+  background-color: #0082e6;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+}
+.body {
+  width: 100%;
+  max-width: 1136px;
+  margin-top: 70px;
+  display: flex;
+  background-color: aliceblue;
+  height: calc(100vh - 70px);
+}
+.cityName {
+  margin-top: 50px;
+  font-size: 21px;
+}
+.break {
+  margin-top: 21px;
+}
+.timing {
+  margin-top: 50px;
+}
+.depart {
+  font-size: 14px;
+}
+.depart span {
+  color: grey;
+  font-size: 12px;
+}
+.return {
+  font-size: 16px;
+}
+.return span {
+  color: grey;
+  font-size: 12px;
+}
+.travel-info {
+  font-size: 24px;
+}
+.breakline {
+  border-top: 2px solid rgb(154, 164, 194);
+  margin-bottom: 15px;
+}
+/* ====SIDE PANEL==== */
+.side {
+  width: 250px;
+}
+.user-input {
+  width: 180px;
+  margin-top: 40px;
+}
+.side > button {
+  border-top-right-radius: 12px;
+  width: 68px;
+  height: 25px;
+  margin-bottom: 9px;
+}
+.input {
+  width: 95%;
+  height: 35px;
+  padding: 5px;
+  font-size: medium;
+  font-family: cursive;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  padding: 8px;
+}
+.datepicker {
+  width: 95%;
+  height: 35px;
+  font-size: medium;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+  padding: 4px;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+.count-passenger {
+  width: 95%;
+  height: 35px;
+  font-size: medium;
+  font-family: cursive;
+  border-radius: 5px;
+  margin-top: 12px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  padding: 8px;
+}
+.button {
+  width: 95%;
+  background-color: #0082e6; /* Green */
+  border: none;
+  margin: auto;
+  color: white;
+  padding: 10px 32px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.right-panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.home {
+  margin: auto;
+  background-color: #0082e6;
+  color: white;
+  margin-bottom: 9px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  width: 850px;
+}
+
+.bookingButton {
+  margin-left: 600px;
+}
+.image {
+  width: 170px;
+  height: 180px;
+  border-radius: 50%;
+  margin-top: -30px;
+}
+.handleBody {
+  border: 1px solid #d1bbbb;
+  width: calc(100% - 250px);
+}
+.msg {
+  margin: auto;
+  font-size: xx-large;
+}
+.flightButton {
+  width: 100%;
+  background-color: #0082e6; /* Green */
+  color: white;
+}
+
+.container {
+  padding: 10px 60px;
+}
+/*=======mobile view=======*/
+@media only screen and (max-width: 750px) {
+  .App {
+    width: 100%;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    /* width: 900px; */
+    padding: 0 !important;
+  }
+
+  .handleBody {
+    width: 100%;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+  .side {
+    width: 100vw;
+    background-color: #0b3a50;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .date-input-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .user-input {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+  }
+  .input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .datepicker {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .count-passenger {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: fantasy;
+  }
+  .button {
+    width: 80%;
+    height: 40px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 2px;
+  }
+  .flightButton {
+    background-color: #0082e6;
+    color: white;
+    padding: 10px 32px;
+    margin-bottom: 10px;
+  }
+  .input {
+    font-family: fantasy;
+  }
+  .details {
+    width: 400px;
+  }
+  .bookingButton {
+    margin-left: 250px;
+  }
+  .image {
+    border-radius: 50%;
+  }
+  
+}
