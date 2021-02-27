@@ -1,0 +1,43 @@
+.details {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin-top: 41px;
+}
+.home {
+  margin-bottom: 9px;
+  background-color: papayawhip;
+  border-radius: 25px;
+}
+.home h1 {
+  color: teal;
+  padding: 17px;
+  /* padding: 12px 23px; */
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.booking_button {
+  background-color: #92bebe;
+  margin-left: 81px;
+  width: 120px;
+  padding: 9px;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    width: 100%;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    text-align: center;
+    font-size: 25px;
+  }
+  .booking_button {
+    width: 215px;
+    margin: auto;
+  }
+}

@@ -11,10 +11,3 @@ let d = data.filter((e)=>{
 
 console.log(d);
 
-
-home
-details
-cityname
-Image
-bookingbutton
-css of home.js

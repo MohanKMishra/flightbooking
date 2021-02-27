@@ -1,0 +1,78 @@
+.side {
+  background-color: teal;
+  width: 220px;
+  height: 350px;
+  margin-top: 50px;
+  /* position: fixed; */
+  /* left:0; */
+}
+.option_choose {
+  display: flex;
+  justify-content: space-around;
+}
+.flight_button {
+  border-top-right-radius: 9px;
+  height: 30px;
+  width: 70px;
+  margin: 11px 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.input {
+  width: 172px;
+  margin: 8px 23px;
+  height: 30px;
+  padding: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.datepicker {
+  width: 172px;
+  margin: 8px 23px;
+  height: 30px;
+  padding: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.count_passenger {
+  width: 172px;
+  margin: 8px 23px;
+  height: 30px;
+  padding: 8px;
+}
+.button {
+  width: 172px;
+  margin: 8px 23px;
+  height: 30px;
+  padding: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.breakline {
+  border-bottom: 2px solid;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side {
+    /* background-color: violet; */
+    width: 100%;
+  }
+  .option_choose {
+    display: flex;
+    justify-content: space-around;
+  }
+  .input {
+    width: 85%;
+  }
+  .datepicker {
+    width: 111%;
+  }
+  .count_passenger {
+    width: 85%;
+  }
+  .button {
+    width: 85%;
+  }
+}

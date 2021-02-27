@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./Sidepannel.css";
 
-const Sidepannel = ({ formData, setFormData, handleFormSubmit }) => {
-  const { revert, departure } = formData;
+const Sidepannel = ({
+  formData,
+  setFormData,
+  handleFormSubmit,
+  manageFormSubmit,
+}) => {
+  const { revert, departure, twoWay } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,6 +18,7 @@ const Sidepannel = ({ formData, setFormData, handleFormSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleFormSubmit();
+    manageFormSubmit();
   };
 
   const handleWay = (e) => {
@@ -23,22 +30,24 @@ const Sidepannel = ({ formData, setFormData, handleFormSubmit }) => {
 
   return (
     <form className="side" onSubmit={handleSubmit}>
-      <div>
-        <input
-          className="flightButton"
-          onChange={handleWay}
-          type="button"
-          value="One Way"
-        />
-      </div>
-      <div>
-        <input
-          className="flightButton"
-          onChange={handleWay}
-          type="button"
-          value="Return"
-          name="two-way"
-        />
+      <div className="option_choose">
+        <div>
+          <input
+            className="flight_button"
+            onClick={handleWay}
+            type="button"
+            value="One Way"
+          />
+        </div>
+        <div>
+          <input
+            className="flight_button"
+            onClick={handleWay}
+            type="button"
+            value="Return"
+            name="two-way"
+          />
+        </div>
       </div>
       <div>
         <input
@@ -64,16 +73,19 @@ const Sidepannel = ({ formData, setFormData, handleFormSubmit }) => {
           onChange={(date) => setFormData({ ...formData, departure: date })}
           className="datepicker"
         />
-        <div style={{"width":"5px"}}></div>
-        <DatePicker
-          selected={revert}
-          onChange={(date) => setFormData({ ...formData, revert: date })}
-          className="datepicker"
-        />
       </div>
+      {twoWay && (
+        <div>
+          <DatePicker
+            selected={revert}
+            onChange={(date) => setFormData({ ...formData, revert: date })}
+            className="datepicker"
+          />
+        </div>
+      )}
       <div>
         <input
-          className="count-passenger"
+          className="count_passenger"
           type="number"
           placeholder="Passengers"
           onChange={handleChange}

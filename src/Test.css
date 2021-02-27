@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  height: 100vh;
+}
+.right_panel {
+  margin-bottom: 15px;
+}
+.handleBody {
+  width: 900px;
+  margin-top: 80px;
+  margin-left: 90px;
+}
+/*navbar*/
+.navbar {
+  background-color: #8b7e55;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 31px;
+  text-align: center;
+  color: white;
+  height: 50px;
+  padding: 4px;
+  margin-bottom: 2px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/*body*/
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .body {
+    width: 100%;
+  }
+  .navbar {
+    color: teal;
+    width: 100%;
+  }
+  .datedesign {
+    width: 600px;
+  }
+  .handleBody {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .datedesign {
+    width: 100%;
+  }
+  .msg {
+    text-align: center;
+  }
+}
